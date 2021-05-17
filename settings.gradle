@@ -1,0 +1,3 @@
+rootProject.name = "LoadingDialog"
+include ':app'
+include ':lib'
