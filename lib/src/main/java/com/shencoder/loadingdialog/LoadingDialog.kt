@@ -20,7 +20,10 @@ class LoadingDialog(
     private val mTvHint: TextView
 
     companion object {
-        fun createDefault(context: Context) = Builder(context).build()
+        /**
+         * 创建默认配置的[LoadingDialog]
+         */
+        fun createDefault(context: Context) = Builder(context).create()
     }
 
     init {
@@ -53,6 +56,9 @@ class LoadingDialog(
         internal var mHintText = DEFAULT_HINT_TEXT
         fun setHintText(text: String) = apply { this.mHintText = text }
 
-        fun build() = LoadingDialog(this)
+        /**
+         * 创建[LoadingDialog]
+         */
+        fun create() = LoadingDialog(this)
     }
 }
