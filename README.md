@@ -24,3 +24,9 @@ dependencies {
     implementation 'com.github.shenbengit:LoadingDialog:Tag'
 }
 ```
+
+## 使用事例
+
+```kotlin
+
+```
