@@ -23,11 +23,13 @@ class LoadingDialog internal constructor(
         /**
          * 创建默认配置的[LoadingDialog]
          */
+        @JvmStatic
         fun createDefault(context: Context) = Builder(context).create()
 
         /**
          * 创建默认配置的[LoadingDialog]
          */
+        @JvmStatic
         fun createDefault(context: Context, @StyleRes themeResId: Int) =
             Builder(context, themeResId).create()
     }
