@@ -28,8 +28,8 @@ dependencies {
 ```kotlin
 // 创建自定义LoadingDialog
 val loadingDialog = LoadingDialog.Builder(context, R.style.LoadingDialog)
-            .setCancelable(true)//[Dialog.setCancelable]
-            .setCanceledOnTouchOutside(true)//[Dialog.setCanceledOnTouchOutside]
+            .setCancelable(false)//[Dialog.setCancelable]
+            .setCanceledOnTouchOutside(false)//[Dialog.setCanceledOnTouchOutside]
             .setHintText("加载中...")//设置显示的提示性文字内容
             .showHintText(true)//是否显示提示性文字
             .create()
@@ -40,5 +40,6 @@ val loadingDialog = LoadingDialog.Builder(context, R.style.LoadingDialog)
  loadingDialog.dismiss()//or loadingDialog.cancel()
  
  //快速创建默认配置的LoadingDialog
-val defaultLoadingDialog = LoadingDialog.createDefault(context)
+val defaultLoadingDialog1 = LoadingDialog.createDefault(context)
+val defaultLoadingDialog2 = LoadingDialog.createDefault(context, R.style.LoadingDialog)
 ```
