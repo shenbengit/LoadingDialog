@@ -43,3 +43,5 @@ val loadingDialog = LoadingDialog.Builder(context, R.style.LoadingDialog)
 val defaultLoadingDialog1 = LoadingDialog.createDefault(context)
 val defaultLoadingDialog2 = LoadingDialog.createDefault(context, R.style.LoadingDialog)
 ```
+
+# [License](https://github.com/shenbengit/LoadingDialog/blob/master/LICENSE)
