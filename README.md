@@ -2,9 +2,7 @@
 封装Android LoadingDialog
 
 ## 效果展示
-
-![LoadingDialog](https://github.com/shenbengit/LoadingDialog/blob/master/screenshots/LoadingDialog.gif)
-
+<img src="https://github.com/shenbengit/LoadingDialog/blob/master/screenshots/LoadingDialog.gif" alt="动图演示效果" width="250px">
 
 ## 引入
 
