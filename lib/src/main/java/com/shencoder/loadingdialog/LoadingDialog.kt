@@ -13,25 +13,32 @@ import androidx.annotation.StyleRes
  * @date    2021/05/17 11:12
  * @email   714081644@qq.com
  */
-class LoadingDialog internal constructor(
+class LoadingDialog private constructor(
     builder: Builder
 ) : Dialog(builder.context, builder.themeResId) {
 
     private val mTvHint: TextView
 
     companion object {
+
+        @JvmStatic
+        fun builder(context: Context) = Builder(context)
+
+        @JvmStatic
+        fun builder(context: Context, @StyleRes themeResId: Int) = Builder(context, themeResId)
+
         /**
          * 创建默认配置的[LoadingDialog]
          */
         @JvmStatic
-        fun createDefault(context: Context) = Builder(context).create()
+        fun createDefault(context: Context) = builder(context).create()
 
         /**
          * 创建默认配置的[LoadingDialog]
          */
         @JvmStatic
         fun createDefault(context: Context, @StyleRes themeResId: Int) =
-            Builder(context, themeResId).create()
+            builder(context, themeResId).create()
     }
 
     init {
@@ -54,7 +61,7 @@ class LoadingDialog internal constructor(
         mTvHint.visibility = if (isShow) View.VISIBLE else View.GONE
     }
 
-    class Builder @JvmOverloads constructor(
+    class Builder @JvmOverloads internal constructor(
         internal val context: Context,
         @StyleRes internal val themeResId: Int = R.style.LoadingDialog
     ) {

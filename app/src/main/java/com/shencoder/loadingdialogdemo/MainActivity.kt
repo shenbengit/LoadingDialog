@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        loadingDialog = LoadingDialog.Builder(this, R.style.LoadingDialog)
+        loadingDialog = LoadingDialog.builder(this, R.style.LoadingDialog)
             .setCancelable(false)
             .setCanceledOnTouchOutside(false)
             .setHintText("请稍后...")
